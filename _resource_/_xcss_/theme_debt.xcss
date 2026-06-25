@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XCSS version="1.1">
+  <CSSData><![CDATA[]]></CSSData>
+  <CSSData type="desktop"><![CDATA[.Form {
+    font: 16px/normal 'Noto Sans';
+    color: #1A1A1A;
+}
+
+.Button.btn_WF_HighImportance {
+    background: #0D5FC0;
+    color: #FFFFFF;
+    border-radius: 4px;
+    border: 0px none;
+    font: bold 16px/normal 'Noto Sans';
+}
+
+.Button.btn_WF_HighImportance[status=mouseover],
+.Button.btn_WF_HighImportance[status=focused] {
+    background: #0B4A96;
+}
+
+.Static.stc_WF_TitleMain {
+    font: bold 24px/normal 'Noto Sans';
+    color: #1A1A1A;
+}
+
+.Static.stc_WF_TitleSub {
+    font: bold 18px/normal 'Noto Sans';
+    color: #0D5FC0;
+}
+
+/* ĐÃ SỬA: Nền xám sáng #F5F5F5 chuẩn Design Rule */
+.Static.stc_WF_LabelBg {
+    background: #F5F5F5 !important;
+    border: 1px solid #D3D3D3 !important;
+    font: 16px/normal 'Noto Sans';
+    color: #1A1A1A;
+}
+
+.Static.stc_WF_BackIcon {
+    color: #0D5FC0;
+    font: bold 24px/normal 'Noto Sans';
+}
+
+.Edit.edt_WF_Normal,
+.Combo.cmb_WF_Normal {
+    background: #FFFFFF;
+    border: 1px solid #B1B1B1;
+    color: #1A1A1A;
+    font: 16px/normal 'Noto Sans';
+}
+
+.Edit.edt_WF_Normal[status=mouseover],
+.Edit.edt_WF_Normal[status=focused],
+.Combo.cmb_WF_Normal[status=mouseover],
+.Combo.cmb_WF_Normal[status=focused] {
+    border: 1px solid #0D5FC0;
+}
+
+.Edit.edt_WF_Disabled,
+.Edit.edt_WF_Disabled[status=disabled] {
+    background: #ACACAC;
+    border: 1px solid #B1B1B1;
+    color: #1A1A1A;
+    font: 16px/normal 'Noto Sans';
+}
+
+.Edit.edt_WF_Error {
+    border: 1px solid #D43136;
+}
+
+/* =========================================================
+   CẤU HÌNH GRID THEO ĐÚNG TỪ KHÓA NỘI BỘ CỦA NEXACRO
+   ========================================================= */
+.Grid.grd_WF_Standard {
+    border: 1px solid #D3D3D3;
+}
+
+/* ĐÃ SỬA: Nền xám sáng #F5F5F5 cho Header */
+.Grid.grd_WF_Standard .gridhead .cell {
+    background: #F5F5F5; 
+    font: bold 15px/normal 'Noto Sans';
+    color: #1A1A1A;
+    -nexa-border: 1px solid #D3D3D3;
+    text-align: center;
+}
+
+.Grid.grd_WF_Standard .gridbody .cell {
+    background: #FFFFFF; 
+    font: 15px/normal 'Noto Sans';
+    color: #1A1A1A;
+    -nexa-border: 1px solid #DFDFDF;
+}
+
+.Edit.cell_WF_InnerEdit {
+    background: transparent;
+    border: 0px none;
+    font: 15px/normal 'Noto Sans';
+}]]></CSSData>
+  <CSSData type="mobile_large"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_small"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_medium"><![CDATA[]]></CSSData>
+</XCSS>
