@@ -11,7 +11,7 @@
     color: #FFFFFF;
     border-radius: 4px;
     border: 0px none;
-    font: bold 16px/normal 'Noto Sans';
+    font: bold 16px 'Noto Sans';
 }
 
 .Button.btn_WF_HighImportance[status=mouseover],
@@ -29,10 +29,9 @@
     color: #0D5FC0;
 }
 
-/* ĐÃ SỬA: Nền xám sáng #F5F5F5 chuẩn Design Rule */
 .Static.stc_WF_LabelBg {
-    background: #F5F5F5 !important;
-    border: 1px solid #D3D3D3 !important;
+    background: #F5F5F5;
+    border: 1px solid #D3D3D3;
     font: 16px/normal 'Noto Sans';
     color: #1A1A1A;
 }
@@ -69,14 +68,10 @@
     border: 1px solid #D43136;
 }
 
-/* =========================================================
-   CẤU HÌNH GRID THEO ĐÚNG TỪ KHÓA NỘI BỘ CỦA NEXACRO
-   ========================================================= */
 .Grid.grd_WF_Standard {
     border: 1px solid #D3D3D3;
 }
 
-/* ĐÃ SỬA: Nền xám sáng #F5F5F5 cho Header */
 .Grid.grd_WF_Standard .gridhead .cell {
     background: #F5F5F5; 
     font: bold 15px/normal 'Noto Sans';
