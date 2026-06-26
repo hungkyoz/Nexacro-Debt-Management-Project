@@ -11,5 +11,6 @@
         </HFrameSet>
       </MainFrame>
     </Layout>
+    <Style url="xcssrc::theme_debt.xcss"/>
   </Application>
 </ADL>
