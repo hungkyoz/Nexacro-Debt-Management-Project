@@ -25,10 +25,11 @@
               <Columns>
                 <Column size="35"/>
                 <Column size="135"/>
-                <Column size="520"/>
-                <Column size="90"/>
-                <Column size="180"/>
-                <Column size="168"/>
+                <Column size="56"/>
+                <Column size="48"/>
+                <Column size="48"/>
+                <Column size="48"/>
+                <Column size="48"/>
               </Columns>
               <Rows>
                 <Row size="48" band="head"/>
@@ -39,26 +40,20 @@
               <Band id="head">
                 <Cell rowspan="2" text="C&#13;&#10;h&#13;&#10;o&#13;&#10;o&#13;&#10;s&#13;&#10;e"/>
                 <Cell col="1" text="Related&#13;&#10;Customer Number"/>
-                <Cell col="2" text="Customername"/>
-                <Cell col="3" text="Date of&#13;&#10;Birth"/>
-                <Cell col="4" text="Debt Completion&#13;&#10;Reason (Before)"/>
-                <Cell col="5" text="Debt Completion&#13;&#10;Reason (After)"/>
-                <Cell row="1" col="1" text="Related Debt Name (Before)"/>
-                <Cell row="1" col="2" text="Related Debt Name (After)"/>
-                <Cell row="1" col="3" text="Relationship Details (Before)"/>
-                <Cell row="1" col="4" colspan="2" text="Relationship Details (After)"/>
+                <Cell col="2" colspan="4" text="Customername"/>
+                <Cell col="6" text="1111"/>
+                <Cell row="1" col="1" colspan="2" text="Related Debt Name (Before)"/>
+                <Cell row="1" col="3" colspan="2"/>
+                <Cell row="1" col="5" colspan="2"/>
               </Band>
               <Band id="body">
                 <Cell rowspan="2" displaytype="imagecontrol" text="expr:chk=='1'?'theme://images/rdo_WF_Radio_S.png':'theme://images/rdo_WF_Radio_O.png'"/>
                 <Cell col="1" displaytype="editcontrol" edittype="text" text="bind:custNo" textAlign="center" cssclass="cell_WF_InnerEdit"/>
-                <Cell col="2" text="bind:custName" textAlign="center"/>
-                <Cell col="3" text="bind:dob" textAlign="center"/>
-                <Cell col="4" text="bind:reasonBef" textAlign="center"/>
-                <Cell col="5" displaytype="combocontrol" edittype="combo" text="bind:reasonAft" combodataset="ds_ComboData" combocodecol="code" combodatacol="value"/>
-                <Cell row="1" col="1" text="bind:debtNameBef" textAlign="center"/>
-                <Cell row="1" col="2" displaytype="combocontrol" edittype="combo" text="bind:debtNameAft" combodataset="ds_ComboData" combocodecol="code" combodatacol="value"/>
-                <Cell row="1" col="3" text="bind:relDetailsBef" textAlign="center"/>
-                <Cell row="1" col="4" colspan="2" displaytype="combocontrol" edittype="combo" text="bind:relDetailsAft" combodataset="ds_ComboData" combocodecol="code" combodatacol="value"/>
+                <Cell col="2" colspan="4" text="bind:custName" textAlign="center"/>
+                <Cell col="6"/>
+                <Cell row="1" col="1" colspan="2" text="bind:debtNameBef" textAlign="center"/>
+                <Cell row="1" col="3" colspan="2"/>
+                <Cell row="1" col="5" colspan="2"/>
               </Band>
             </Format>
           </Formats>
