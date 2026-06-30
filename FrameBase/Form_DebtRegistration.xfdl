@@ -7,17 +7,17 @@
         <Static id="stc_ScreenTitle" taborder="1" left="72" top="32" width="600" height="32" cssclass="stc_WF_TitleMain" text="Debt-related Registration / Correction / Deletion"/>
         <Button id="btn_Execute" taborder="2" top="28" width="120" height="40" left="1130" cssclass="btn_WF_HighImportance" text="Execute"/>
         <Static id="stc_KeyItemTitle" taborder="3" left="32" top="96" width="200" height="24" cssclass="stc_WF_TitleSub" text="Key item"/>
-        <Static id="stc_GuaranteeLabel" taborder="4" left="32" top="132" width="160" height="32" cssclass="stc_WF_LabelBg" text="Guarantee Number" textAlign="center" background="#acacac" border="1px solid #888888"/>
-        <Edit id="edt_GuaranteeNumber" taborder="5" left="192" top="132" width="240" height="32" cssclass="edt_WF_Disabled" enable="false" value="xxxxxxxxxxxxxx" border="1px solid #888888"/>
-        <Static id="stc_StatusLabel" taborder="6" left="440" top="132" width="100" height="32" cssclass="stc_WF_LabelBg" text="Status" textAlign="center" background="#acacac" border="1px solid #888888"/>
-        <Edit id="edt_Status" taborder="7" left="540" top="132" width="652" height="32" cssclass="edt_WF_Normal" value="NNNNN" border="1px solid #888888"/>
+        <Static id="stc_GuaranteeLabel" taborder="4" left="32" top="132" width="160" height="32" cssclass="stc_WF_LabelBg" text="Guarantee Number" textAlign="center" background="#acacac" border="1px solid #D3D3D3"/>
+        <Edit id="edt_GuaranteeNumber" taborder="5" left="192" top="132" width="240" height="32" cssclass="edt_WF_Disabled" enable="false" value="xxxxxxxxxxxxxx" border="1px solid #D3D3D3"/>
+        <Static id="stc_StatusLabel" taborder="6" left="440" top="132" width="100" height="32" cssclass="stc_WF_LabelBg" text="Status" textAlign="center" background="#acacac" border="1px solid #D3D3D3"/>
+        <Edit id="edt_Status" taborder="7" left="540" top="132" width="652" height="32" cssclass="edt_WF_Normal" value="NNNNN" border="1px solid #D3D3D3"/>
         <Static id="stc_CustInfoTitle" taborder="8" left="32" top="192" width="300" height="24" cssclass="stc_WF_TitleSub" text="Customer Information"/>
-        <Static id="stc_CustNameLabel" taborder="9" left="32" top="224" width="160" height="32" cssclass="stc_WF_LabelBg" text="Customer Name" padding="0px 0px 0px 8px" background="#acacac" border="1px solid #888888"/>
-        <Edit id="edt_CustName" taborder="10" left="192" top="224" width="1000" height="32" cssclass="edt_WF_Normal" value="NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN" border="1px solid #888888"/>
-        <Static id="stc_AddressLabel" taborder="11" left="32" top="260" width="160" height="32" cssclass="stc_WF_LabelBg" text="Address" padding="0px 0px 0px 8px" background="#acacac" border="1px solid #888888"/>
-        <Edit id="edt_Address" taborder="12" left="192" top="260" width="1000" height="32" cssclass="edt_WF_Normal" value="NNNNNNNNNNNNNNNNNNNNN" border="1px solid #888888"/>
-        <Static id="stc_DobLabel" taborder="13" left="32" top="296" width="160" height="32" cssclass="stc_WF_LabelBg" text="Date of Birth" padding="0px 0px 0px 8px" background="#acacac" border="1px solid #888888"/>
-        <Edit id="edt_Dob" taborder="14" left="192" top="296" width="1000" height="32" cssclass="edt_WF_Normal" value="MM/DD/YYYY" border="1px solid #888888"/>
+        <Static id="stc_CustNameLabel" taborder="9" left="32" top="224" width="160" height="32" cssclass="stc_WF_LabelBg" text="Customer Name" padding="0px 0px 0px 8px" background="#acacac" border="1px solid #D3D3D3"/>
+        <Edit id="edt_CustName" taborder="10" left="192" top="224" width="1000" height="32" cssclass="edt_WF_Normal" value="NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN" border="1px solid #D3D3D3"/>
+        <Static id="stc_AddressLabel" taborder="11" left="32" top="260" width="160" height="32" cssclass="stc_WF_LabelBg" text="Address" padding="0px 0px 0px 8px" background="#acacac" border="1px solid #D3D3D3"/>
+        <Edit id="edt_Address" taborder="12" left="192" top="260" width="1000" height="32" cssclass="edt_WF_Normal" value="NNNNNNNNNNNNNNNNNNNNN" border="1px solid #D3D3D3"/>
+        <Static id="stc_DobLabel" taborder="13" left="32" top="296" width="160" height="32" cssclass="stc_WF_LabelBg" text="Date of Birth" padding="0px 0px 0px 8px" background="#acacac" border="1px solid #D3D3D3"/>
+        <Edit id="edt_Dob" taborder="14" left="192" top="296" width="1000" height="32" cssclass="edt_WF_Normal" value="MM/DD/YYYY" border="1px solid #D3D3D3"/>
         <Static id="stc_DebtInfoTitle" taborder="15" left="32" top="352" width="300" height="24" cssclass="stc_WF_TitleSub" text="Debt-related Information"/>
         <Grid id="grd_DebtList" taborder="16" left="32" top="384" width="1160" bottom="64" binddataset="ds_DebtList" autofittype="col" cssclass="grd_WF_Standard" oncellclick="grd_DebtList_oncellclick">
           <Formats>
@@ -67,10 +67,39 @@
         </Grid>
       </Layout>
     </Layouts>
-    <Script type="xscript5.1"><![CDATA[this.DebtRegistration_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+    <Objects>
+      <Dataset id="ds_DebtList">
+        <ColumnInfo>
+          <Column id="chk" type="STRING" size="256"/>
+          <Column id="custNo" type="STRING" size="256"/>
+          <Column id="custName" type="STRING" size="256"/>
+          <Column id="dob" type="STRING" size="256"/>
+          <Column id="reasonBef" type="STRING" size="256"/>
+          <Column id="reasonAft" type="STRING" size="256"/>
+          <Column id="debtNameBef" type="STRING" size="256"/>
+          <Column id="debtNameAft" type="STRING" size="256"/>
+          <Column id="relDetailsBef" type="STRING" size="256"/>
+          <Column id="relDetailsAft" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_ComboData">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="value" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">01</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.DebtRegistration_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 {
     this.fn_initMockData();
 };
+
 this.fn_initMockData = function()
 {
     this.ds_DebtList.clearData();
@@ -106,40 +135,9 @@ this.grd_DebtList_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEve
         for (var i = 0; i < this.ds_DebtList.getRowCount(); i++)
         {
             this.ds_DebtList.setColumn(i, "chk", (i == e.row) ? "1" : "0");
-
         }
-
     }
-
 };
-
 ]]></Script>
-    <Objects>
-      <Dataset id="ds_DebtList">
-        <ColumnInfo>
-          <Column id="chk" type="STRING" size="256"/>
-          <Column id="custNo" type="STRING" size="256"/>
-          <Column id="custName" type="STRING" size="256"/>
-          <Column id="dob" type="STRING" size="256"/>
-          <Column id="reasonBef" type="STRING" size="256"/>
-          <Column id="reasonAft" type="STRING" size="256"/>
-          <Column id="debtNameBef" type="STRING" size="256"/>
-          <Column id="debtNameAft" type="STRING" size="256"/>
-          <Column id="relDetailsBef" type="STRING" size="256"/>
-          <Column id="relDetailsAft" type="STRING" size="256"/>
-        </ColumnInfo>
-      </Dataset>
-      <Dataset id="ds_ComboData">
-        <ColumnInfo>
-          <Column id="code" type="STRING" size="256"/>
-          <Column id="value" type="STRING" size="256"/>
-        </ColumnInfo>
-        <Rows>
-          <Row>
-            <Col id="code">01</Col>
-          </Row>
-        </Rows>
-      </Dataset>
-    </Objects>
   </Form>
 </FDL>
